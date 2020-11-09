@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SieveOfEretorthenes",
+            "request": "launch",
+            "mainClass": "Java.SieveOfEretorthenes",
+            "projectName": "Prime-Number_28786f8a"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Hello",
+            "request": "launch",
+            "mainClass": "Java.Hello",
+            "projectName": "Prime-Number_28786f8a"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SieveOfEratorthenes",
+            "request": "launch",
+            "mainClass": "Java.SieveOfEratorthenes",
+            "projectName": "Prime-Number_28786f8a"
+        },
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "enter program name, for example ${workspaceFolder}/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
