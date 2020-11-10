@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - PrimeNumberFindingUsingSieveOfEratrothenis",
+            "request": "launch",
+            "mainClass": "Java.PrimeNumberFindingUsingSieveOfEratrothenis",
+            "projectName": "ACM-ICPC-_1b5f90b"
+        },
+        {
             "name": "(gdb) Attach",
             "type": "cppdbg",
             "request": "attach",
