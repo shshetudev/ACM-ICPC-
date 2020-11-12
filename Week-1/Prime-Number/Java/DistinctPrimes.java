@@ -1,14 +1,44 @@
 package Java;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 
 public class DistinctPrimes {
     public static void main(String[] args) {
-        Integer number = 30;
-       System.out.println(isLucky(number));
+        List<Integer> luckyNumbers = new LinkedList<>();
+        try(Scanner input = new Scanner(System.in)){
+            int numberOfTestCases = input.nextInt();
+            while(numberOfTestCases-->0){
+                luckyNumbers.add(findLuckyNumber(input.nextInt()));
+            } 
+        }
+        printLuckyNumbers(luckyNumbers);
     }
     
+    // print the lucky numbers
+    private static void printLuckyNumbers(List<Integer> luckyNumberList){
+        for (int i = 0; i < luckyNumberList.size(); i++) {
+            System.out.println(luckyNumberList.get(i));
+        }
+    }
+
+    // generate lucky numbers
+    private static Integer findLuckyNumber(int nthTerm){
+        List<Integer> luckyNumberList = new LinkedList<>(Arrays.asList(30));
+        Integer i = 31;
+        if(nthTerm != 1){   
+        while(true){
+            if(isLucky(i)) luckyNumberList.add(i);
+            if(luckyNumberList.size() == nthTerm) break;
+            i++;
+        }
+        }
+        return luckyNumberList.get(luckyNumberList.size()-1);
+    }
+
     // check the number is lucky or not
     private static boolean isLucky(Integer number){
         boolean luckyNumber = false;
@@ -20,7 +50,6 @@ public class DistinctPrimes {
     // traverse all the numbers from 2 to n
     private static List<Integer> findPrimeFactors(Integer number){
         List<Integer> primeFactorsOfLuckyNumber = addPrimeFactors(number);
-        System.out.println(primeFactorsOfLuckyNumber);
         return primeFactorsOfLuckyNumber;
     }
 
