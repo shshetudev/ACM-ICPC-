@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class PrimeNumbers {
     public static void main(String[] args) {
-        try (Scanner scan = new Scanner(System.in)) {
+        try (Scanner scan = InputScanner.getScanner()){
             // take last input
             int lastNumber = scan.nextInt();
 
